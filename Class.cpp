@@ -137,17 +137,17 @@ float Gradebook::get_grade(string student) {
 	int student_num = get_student_num(student);
 
 	for (int i = 3; i < students[student_num].size(); i++) {
-		if (isdigit(stoi(students[student_num][i]))) {
-			mid = grade + (stof(students[student_num][i])/max_grades[i-2]);
-			grade = mid;
+		if (students[student_num][i] == "none") {
+			missing++;
 		}
 		else {
-			missing++;
+			mid = grade + (stof(students[student_num][i]) / max_grades[i - 2]);
+			grade = mid;
 		}
 	}
 
 	mid = grade / (students[student_num].size() - (missing + 3));
-	grade = mid;
+	grade = mid * 100;
 
 	return grade;
 }

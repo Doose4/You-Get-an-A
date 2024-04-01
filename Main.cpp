@@ -41,6 +41,10 @@ int main() {
 	//Prints out to verify correct output
 	cout << css_122.report() << endl;
 
+	//prints average grade for a student
+	cout << css_122.get_grade("Bob Bobberson") << "%" << endl;
+	cout << css_122.get_grade("Sam Sammerson") << "%" << endl;
+
 	cout << "Test Finished!" << endl;
 
 	return 0;
