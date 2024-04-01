@@ -45,6 +45,10 @@ int main() {
 	cout << css_122.get_grade("Bob Bobberson") << "%" << endl;
 	cout << css_122.get_grade("Sam Sammerson") << "%" << endl;
 
+	//prints assignment information
+	cout << css_122.assignment_info("Test 1") << endl;
+	cout << css_122.assignment_info("Quiz 1") << endl;
+
 	cout << "Test Finished!" << endl;
 
 	return 0;

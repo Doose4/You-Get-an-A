@@ -23,4 +23,5 @@ public:
 	float get_grade(string student);
 	string list_grades(string student);
 	string report();
+	string assignment_info(string assignment_name);
 };

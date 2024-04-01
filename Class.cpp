@@ -195,3 +195,27 @@ string Gradebook::report() {
 
 	return final_output;
 }
+
+string Gradebook::assignment_info(string assignment_name) {
+	int k = get_assignment(assignment_name);
+	string outputed;
+
+	outputed = "Last_Name,First_Name,Student_Id";
+
+	outputed = outputed + "," + assignments[k] + "\n";
+
+	for (int i = 1; i < students.size(); i++)
+	{
+		outputed = outputed + students[i][0];
+		for (int j = 1; j < 3; j++)
+		{
+			outputed = outputed + "," + students[i][j];
+		}
+		outputed = outputed + "," + students[i][k+2];
+		outputed = outputed + "\n";
+	}
+	string final_output;
+
+	final_output = outputed;
+	return final_output;
+}
